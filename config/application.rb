@@ -12,6 +12,7 @@ module DealSite
     config.filter_parameters += [:password]
     config.assets.enabled = true
     config.assets.version = '1.0'
-    config.assets.paths << Rails.root.join("app", "themes")
+    config.assets.paths += Dir.glob(Rails.root.join *%w{app themes})
+    config.assets.precompile = [Proc.new{ |path| File.extname(path).in?(%w{.js .css .png})}]
   end
 end
