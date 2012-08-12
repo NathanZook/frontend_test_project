@@ -1662,7 +1662,7 @@ body {
     background: -o-linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* IE10+ */
     background: linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* W3C */
-    -pie-background: background : linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* W3C */
+    -pie-background: /*background :*/ linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* W3C */
     border: 1px solid #ffffff;
     position: relative;
     overflow: hidden;
@@ -1798,7 +1798,8 @@ body {
     -moz-transition-timing-function: ease-in;
     -o-transition-property: box-shadow;
     -o-transition-duration: 0.10s;
-    -o-transition-timing-function: ease-in, ease-in transition-property :box-shadow;
+    -o-transition-timing-function: ease-in, ease-in;
+    transition-property :box-shadow;
     transition-duration: 0.10s;
     transition-timing-function: ease-in;
     behavior: url(/stylesheets/PIE.htc);
@@ -1813,11 +1814,11 @@ body {
     background: #db2326; /* Old browsers */
     background: -moz-linear-gradient(top, #888 0%, #555 100%) !important; /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#888), color-stop(100%,#555)) !important; /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #888 .un0%,#555 100%) !important; /* Chrome10+,Safari5.1+ */
+    background: -webkit-linear-gradient(top, #888 /* No reference to a '.un' in Safari spec  .un*/0%,#555 100%) !important; /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top, #888 0%,#555 100%) !important; /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #888888 0%,#555555 100%) !important; /* IE10+ */
     background: linear-gradient(top, #888 0%,#555 100%) !important; /* W3C */
-    filter: progid :DXImageTransform.Microsoft.gradient( startColorstr='#888888', endColorstr='#555555',GradientType=0 ) !important; /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#888888', endColorstr='#555555',GradientType=0 ) !important; /* IE6-9 */
     border: 1px solid #333;
     border-radius: 10px;
     box-shadow: inset 0px 0px 2px #ffffff;
@@ -1836,7 +1837,8 @@ body {
     -moz-transition-timing-function: ease-in;
     -o-transition-property: box-shadow;
     -o-transition-duration: 0.10s;
-    -o-transition-timing-function: ease-in, ease-in transition-property :box-shadow;
+    -o-transition-timing-function: ease-in, ease-in;
+    transition-property :box-shadow;
     transition-duration: 0.10s;
     transition-timing-function: ease-in;
     behavior: url(/stylesheets/PIE.htc);
@@ -2342,7 +2344,7 @@ body {
     background: -o-linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* IE10+ */
     background: linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* W3C */
-    -pie-background: background : linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* W3C */
+    -pie-background: /*background :*/ linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* W3C */
     border: 1px solid #ffffff;
     overflow: hidden;
     border-radius: 10px 10px 0px 0px;
@@ -2407,7 +2409,7 @@ body {
     background: -o-linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* IE10+ */
     background: linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* W3C */
-    -pie-background: background : linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* W3C */
+    -pie-background: /*background :*/ linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* W3C */
     behavior: url(stylesheets/PIE.htc);
     border: 1px solid #ffffff;
     position: relative;
@@ -2417,7 +2419,7 @@ body {
     margin-right: -25px;
     padding-left: 20px;
 }
-#analog_analytics #daily_deal .#analog_analytics #daily_deal .login {
+#analog_analytics #daily_deal .signup, #analog_analytics #daily_deal .login {
 
     background: none repeat scroll 0 0 #FFFFFF;
     border: 1px solid #CCCCCC;
@@ -2438,7 +2440,7 @@ body {
     background: -o-linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* IE10+ */
     background: linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* W3C */
-    -pie-background: background : linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* W3C */
+    -pie-background: /*background :*/ linear-gradient(top, #f7f7f7 0%,#e2e2e2 100%); /* W3C */
     behavior: url(stylesheets/PIE.htc);
     border: 1px solid #ffffff;
     position: relative;
@@ -2587,7 +2589,8 @@ body {
     -moz-transition-timing-function: ease-in, ease-in;
     -o-transition-property: box-shadow, text-shadow;
     -o-transition-duration: 0.10s, 0.30s;
-    -o-transition-timing-function: ease-in, ease-in transition-property :box-shadow, text-shadow;
+    -o-transition-timing-function: ease-in, ease-in;
+    transition-property :box-shadow, text-shadow;
     transition-duration: 0.10s, 0.30s;
     transition-timing-function: ease-in, ease-in;
     behavior: url(/stylesheets/PIE.htc);
@@ -2619,7 +2622,8 @@ body {
     -moz-transition-timing-function: ease-in, ease-in;
     -o-transition-property: box-shadow, text-shadow;
     -o-transition-duration: 0.10s, 0.30s;
-    -o-transition-timing-function: ease-in, ease-in transition-property :box-shadow, text-shadow;
+    -o-transition-timing-function: ease-in, ease-in;
+    transition-property :box-shadow, text-shadow;
     transition-duration: 0.10s, 0.30s;
     transition-timing-function: ease-in, ease-in;
     behavior: url(/stylesheets/PIE.htc);
