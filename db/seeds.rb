@@ -1,8 +1,8 @@
 entertainment = Publisher.create!(name: "Entertainment", theme: "entertainment")
-entertainment_boston = entertainment.publishers.create!(name: "Boston", theme: "entertainment-boston")
-entertainment.publishers.create!(name: "New York", theme: "entertainment-new-york")
-entertainment.publishers.create!(name: "Chicago", theme: "entertainment-chicago")
-entertainment_pdx = entertainment.publishers.create!(name: "Portland", theme: "entertainment-pdx")
+entertainment_boston = entertainment.publishers.create!(name: "Boston", theme: nil)
+entertainment.publishers.create!(name: "New York", theme: nil)
+entertainment.publishers.create!(name: "Chicago", theme: nil)
+entertainment_pdx = entertainment.publishers.create!(name: "Portland", theme: nil)
 
 Publisher.create!(name: "OC Register", theme: "oc-register")
 wcax = Publisher.create!(name: "WCAX", theme: "wcax")

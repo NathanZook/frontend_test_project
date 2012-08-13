@@ -12,4 +12,10 @@ class Publisher < ActiveRecord::Base
     end
     true
   end
+
+  def get_theme
+    p = self
+    p = p.parent while !p.theme and p.parent
+    p.theme
+  end
 end

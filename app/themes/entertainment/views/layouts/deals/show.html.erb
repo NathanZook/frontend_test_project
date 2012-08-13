@@ -9,7 +9,7 @@
 
 
   <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
-  <%= stylesheet_link_tag    "entertainment-new-york/assets/stylesheets/deals", :media => "all" %>
+  <%= stylesheet_link_tag    "entertainment/assets/stylesheets/deals", :media => "all" %>
 
   <script type="text/javascript">
     var aaDealPath = '<%= deal_path @deal, :format => "json" %>';
@@ -29,7 +29,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="#">Entertainment New York Deal of the Day</a>
+        <a class="brand" href="#">Entertainment <%= @publisher_name %> Deal of the Day</a>
       </div>
     </div>
   </div>
@@ -58,7 +58,7 @@
 <%= yield %>
 
       <footer>
-        <p>Entertainment New York Deal of the Day</p>
+        <p>Entertainment <%= @publisher_name %> Deal of the Day</p>
       </footer>
 
     </div> <!-- /container -->

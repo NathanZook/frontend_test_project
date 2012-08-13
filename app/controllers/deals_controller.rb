@@ -48,6 +48,9 @@ class DealsController < ApplicationController
   end
 
   def set_view_paths
-    prepend_view_path "app/themes/#{@deal.advertiser.publisher.theme}/views"
+    publisher = @deal.advertiser.publisher
+    theme = publisher.get_theme
+    @publisher_name = publisher.name
+    prepend_view_path "app/themes/#{theme}/views"
   end
 end
