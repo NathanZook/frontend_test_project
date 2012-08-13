@@ -7,9 +7,13 @@ class DealTest < ActiveSupport::TestCase
 
   # I think this is a bad test and it fails sometimes
   test "over should honor current time" do
-  	deal = FactoryGirl.create(:deal, :end_at => Time.zone.now + 0.01)
-  	assert !deal.over?, "Deal should not be over"
-  	sleep 1
-  	assert deal.over?, "Deal should be over"
+    t0 = Time.zone.now
+    Timecop.freeze t0 do
+      deal = FactoryGirl.create(:deal, :end_at => t0 + 0.01)
+      assert !deal.over?, "Deal should not be over"
+      Timecop.freeze t0 + 0.02 do
+        assert deal.over?, "Deal should be over"
+      end
+    end
   end
 end
