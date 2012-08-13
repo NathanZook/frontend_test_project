@@ -3,7 +3,7 @@ class DealsController < ApplicationController
   before_filter :set_view_paths, only: :show
 
   def index
-    @deals = Deal.all
+    @deals = Deal.all(include: {advertiser: {publisher: :parent}}, order: :id)
   end
 
   def show
@@ -40,7 +40,6 @@ class DealsController < ApplicationController
     @deal.destroy
     redirect_to deals_url
   end
-
 
   protected
 

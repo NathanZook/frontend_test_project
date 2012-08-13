@@ -1,3 +1,6 @@
+<%-
+cache(cache_key('deals', 'index', nil)) do
+-%>
 <h1>Deals</h1>
 
 <table class="table table-striped">
@@ -16,22 +19,40 @@
   </thead>
 
   <tbody>
-  <% @deals.each do |deal| %>
+
+<%-
+  @deals.each do |deal|
+    cache(cache_key('deals', 'index', deal)) do
+-%>
     <tr>
       <td><%= deal.proposition %></td>
       <td><%= deal.value %></td>
       <td><%= deal.price %></td>
       <td><%= deal.description %></td>
-      <td><%= deal.advertiser.name %></td>
-      <td><%= deal.advertiser.publisher.try(:parent).try(:name) %> <%= deal.advertiser.publisher.name %></td>
+
+    <%-
+      advertiser = deal.advertiser
+      cache(cache_key('deals', 'index', advertiser)) do
+    -%>
+      <td><%= advertiser.name %></td>
+      <td><%= publisher_names(advertiser.publisher) %></td>
+    <%- end -%>
+
       <td><%= link_to 'Show', deal %></td>
       <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
       <td><%= link_to 'Destroy', deal, confirm: 'Are you sure?', method: :delete %></td>
     </tr>
-  <% end %>
+<%-
+    end
+  end
+-%>
+
   </tbody>
 </table>
 
 <br />
 
 <%= link_to 'New Deal', new_deal_path %>
+<%-
+end
+-%>
