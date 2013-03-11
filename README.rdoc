@@ -1,0 +1,27 @@
+This project was assigned to me on 8/7/12 as a test project for a company that
+was considering hiring me.  At the time, I had no serious knowlege of Rails 3,
+nor in-depth knowlege of the Rails front end.  That week, I was helping to run
+the Lone Star Ruby convention, and developing the bylaws for an organization I
+helping to was form.
+
+I am told that the company was very pleased with what they got.  I think it does
+a decent job of showing what kind of work I do when I'm learning.
+
+I santized the README.rdoc & INSTRUCTIONS files.
+
+Nathan Zook
+job@pierian-spring.net
+
+
+
+This is a Ruby 1.9, Rails 3.2 application.
+
+If you have Ruby 1.9 and bundler installed, all you should need to do is:
+
+bundle
+rake db:seed
+rails s
+
+Use 'rake' to run tests.
+
+This is a very simple deal site. Actually _buying_ the deals is for the next version ;). Each Publisher (white-label site) has Advertisers (merchants, retailers, stores), and the Advertisers have Deals. The admin interface is at / (no security!). An example of a deal is at /deals/1 (if you ran db:seed). Some Publishers have custom templates and assets in app/themes. Publishers can be have a simple parent-child hierarchal relationship.
